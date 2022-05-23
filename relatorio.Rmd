@@ -1,0 +1,56 @@
+---
+title: "Relatorio_estacoes"
+author: "Pedro"
+date: "23/05/2022"
+output: 
+  html_document:
+    css: mystyle.css
+---
+
+```{r setup, include=FALSE}
+library(trend)
+library(Kendall)
+"/home/pedro/Área de Trabalho/arquivos/jorge/dados_estacoes"
+arquivos <- dir(pattern = "resultados")
+df1 <- read.csv(arquivos[1], sep=",", h=T)
+df2 <- read.csv(arquivos[2], sep=",", h=T)
+df3 <- read.csv(arquivos[3], sep=",", h=T)
+df4 <- read.csv(arquivos[4], sep=",", h=T)
+df5 <- read.csv(arquivos[5], sep=",", h=T)
+```
+
+## Resultados
+```{r, echo=FALSE}
+writeLines("td, th { padding : 6px } th { background-color : brown ; color : white; border : 1px solid white; } td { color : brown ; border : 1px solid brown }", con = "mystyle.css")
+
+knitr::kable(df1, format = "html")
+
+```
+
+```{r, echo=FALSE}
+writeLines("td, th { padding : 6px } th { background-color : brown ; color : white; border : 1px solid white; } td { color : brown ; border : 1px solid brown }", con = "mystyle.css")
+
+knitr::kable(df2, format = "html")
+
+```
+
+```{r, echo=FALSE}
+writeLines("td, th { padding : 6px } th { background-color : brown ; color : white; border : 1px solid white; } td { color : brown ; border : 1px solid brown }", con = "mystyle.css")
+
+knitr::kable(df3, format = "html")
+
+```
+
+```{r, echo=FALSE}
+writeLines("td, th { padding : 6px } th { background-color : brown ; color : white; border : 1px solid white; } td { color : brown ; border : 1px solid brown }", con = "mystyle.css")
+
+knitr::kable(df4, format = "html")
+
+```
+
+```{r, echo=FALSE}
+writeLines("td, th { padding : 6px } th { background-color : brown ; color : white; border : 1px solid white; } td { color : brown ; border : 1px solid brown }", con = "mystyle.css")
+
+knitr::kable(df5, format = "html")
+
+```
